@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1.5rem;
     background-color: #333;
     color: white;
 }
@@ -27,7 +27,9 @@ nav ul {
 nav a {
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding: 1rem;
+    font-size: larger;
+    font-weight: 700;
 }
 
 /* Dropdown Styles */
@@ -38,9 +40,19 @@ nav a {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #533;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    margin-top: 1rem;
+    
+}
+.dropdown-content a{
+    font-family: inherit;
+    font-size: large;
+    display: inline-block;
+    padding: 1rem;
+    border: solid 1px white;
+    
 }
 
 .dropdown:hover .dropdown-content {
@@ -71,13 +83,12 @@ footer {
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
 }
 
 .copyright {
     margin-top: 1.5rem;
-}
-.about-section {
-    max-width: 300px; /* Adjust the width as needed */
 }

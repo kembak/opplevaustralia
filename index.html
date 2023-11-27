@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Travel Agency</title>
+    <script defer src="script.js"></script>
 </head>
 <body>
 
     <!-- Header -->
     <header>
         <div class="logo">
-            <a href="index.html"><img src="placeholder_logo.png" alt="Travel Agency Logo"></a>
+            <a href="index.html"><img src="media/australia-for-alle-high-resolution-logo-transparent.png" alt="Travel Agency Logo"></a>
         </div>
         <nav>
             <ul>
@@ -27,14 +28,23 @@
                 <li class="nav-item"><a href="kalender.html">Kalender</a></li>
                 <li class="nav-item"><a href="reisetyper.html">Reisetyper</a></li>
                 <li class="nav-item"><a href="inspirasjon.html">Inspirasjon</a></li>
-                <li class="nav-item"><a href="kontaktoss.html">Min side</a></li>
+                <!-- <li class="nav-item"><a href="kontaktoss.html">Min side</a></li> -->
             </ul>
+            
+            <div class="search-container">
+                <input type="text" id="searchField" placeholder="Hva leter du etter?">
+                <button id="searchButton">
+                    <img src="media/search-icon.png" alt="Search Icon" style="height:32px ;">
+                </button>
+                
+            </div>
         </nav>
-        <div class="search">
-            <button class="search_button">
-                SØK
+<!--        <div class="search-container">
+            <button id="searchButton">
+                <img src="media/search-icon.png" alt="Search Icon" style="height:32px ;">
             </button>
-        </div>
+            <input type="text" id="searchField" placeholder="Type your search">
+        </div> -->
     </header>
 
     <!-- Main Content -->

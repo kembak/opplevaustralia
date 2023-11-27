@@ -9,27 +9,30 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-/*.logo{
-    padding-left: .75rem;
-}*/
+
+.logo img{
+    height: 24px;
+}
 
 /* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem;
+    padding: 2rem;
     background-color: white;
     color: black;
 }
 
 nav{
-    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    gap: .25rem;
 
 }
 
@@ -48,8 +51,6 @@ nav a {
     position:relative;
     color: black;
     padding: 1rem;
-    padding-left: 1rem;
-    padding-right: 1.5rem;
     font-size: larger;
     font-weight: 700;
 }
@@ -64,14 +65,9 @@ nav a {
     
 }
 
-.search{ 
-padding-left: 1.5rem;
-padding-right:0; 
-}
 
-/*.search button{
-    margin-left: auto;
-}*/
+
+
 
 /* Dropdown Styles */
 .dropdown {
@@ -115,12 +111,39 @@ padding-right:0;
     border-bottom-left-radius: .5rem;
 }
 
-
-
+/*Søk knapp og felt*/
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/*søk knapp og felt*/
+.search-container {
+    position: relative;
+    /*padding-left: 1rem;
+    margin-top: .25rem;*/
+    display: flex;
+    align-items: center;
+    padding-right: 0rem;
+    margin-right: 0rem;
+}
 
+#searchButton { 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: .75rem;
+    margin-top: .25rem;
+}
+
+#searchField {
+    display: none;
+    width: 10rem; /* Adjust width as needed */
+    height:2rem;
+    background-color: aliceblue;
+    border: none;
+    font-family: inherit;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
 /* Main Content Styles */
 main {
 

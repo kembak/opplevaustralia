@@ -5,47 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Travel Calendar</title>
+    <script defer src="script.js"></script>
+    
 </head>
 <body>
 
+    
     <!-- Header -->
     <header>
         <div class="logo">
-            <a href="index.html"><img src="placeholder_logo.png" alt="Travel Agency Logo"></a>
+            <a href="index.html"><img src="media/australia-for-alle-high-resolution-logo-transparent.png" alt="Travel Agency Logo"></a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="calendar.html">Travel Calendar</a></li>
-                <!-- ... (other menu items) ... -->
-                <li><a href="contact.html">Contact Us</a></li>
+                <li class="nav-item, dropdown">
+                    <a href="reisemaal.html">Reisemål</a>
+                    <div class="dropdown-content">
+                        <a href="#destination1"><span>Melbourne</span></a>
+                        <a href="#destination2"><span>Sydney</span></a>
+                        <a href="#destination3"><span>Hobart</span></a>
+                        <a href="#destination4"><span>Brisbane</span></a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="kalender.html">Kalender</a></li>
+                <li class="nav-item"><a href="reisetyper.html">Reisetyper</a></li>
+                <li class="nav-item"><a href="inspirasjon.html">Inspirasjon</a></li>
+                <!-- <li class="nav-item"><a href="kontaktoss.html">Min side</a></li> -->
             </ul>
+            
+            <div class="search-container">
+                <input type="text" id="searchField" placeholder="Hva leter du etter?">
+                <button id="searchButton">
+                    <img src="media/search-icon.png" alt="Search Icon" style="height:32px ;">
+                </button>
+                
+            </div>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
+        <div class="main-text">
         <!-- Content specific to the Travel Calendar page -->
         <h1>Upcoming Trip Dates</h1>
         <!-- Add content about travel calendar here -->
+        </div>
     </main>
 
+    
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="contact-info">
-                <h3>Contact Us</h3>
+                <a href="kontaktoss.html"><h3>Contact Us</h3></a>
                 <p>Phone: XXX-XXXX</p>
                 <p>Email: info@travelagency.com</p>
             </div>
             <div class="about-section">
+                <a href="omoss.html">
                 <h3>About Us</h3>
+                </a>
+                <!--<a href="omoss.html" class="nodecor">-->
                 <p>Learn more about our travel club and the story behind it.</p>
+                <p>asdasd asdasdasd asd asd asd asd asd asd </p>
+                <p> asdasdasd asd asd asd asd asd asd asd asd </p>
+                <!-- </a> -->
+                
             </div>
-            <div class="social-media">
-                <!-- Add social media links/icons here -->
-            </div>
+            
         </div>
         <p class="copyright">© 2023 Travel Agency. All rights reserved.</p>
     </footer>

@@ -22,11 +22,15 @@ header {
     padding: 2rem;
     background-color: white;
     color: black;
+    border-bottom: 3px solid #F98E54;
+    box-shadow: 0 16px 8px black;
+    z-index: 1;
 }
 
 nav{
     display: flex;
     align-items: center;
+    /*box-shadow: 0 12px 8px rgba(0, 0, 0, 0.8);*/
 }
 
 nav ul {
@@ -145,8 +149,7 @@ nav a {
     padding-left: 1rem;
 }
 /* Main Content Styles */
-main {
-
+main{
     background-color: blanchedalmond;
 }
 

@@ -4,35 +4,38 @@ body, h1, h2, h3, p, ul {
     padding: 0;
 }
 
+
 body {
     min-height: 100vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
+strong{
+    font-weight: 900;
+}
 
 .logo img{
     height: 32px;
 }
 
-/* Header Styles */
+/* Header CSS */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
     background-color: white;
-    background-color: #FFA96A;
+    background-color: #FFb56a;
     color: black;
     border-bottom: 2px solid black;
     box-shadow: 0px .125rem 1rem rgba(0, 0, 0, .7);
     position: relative;
-    z-index: 9;
+    z-index:99;
 }
 
 nav{
     display: flex;
     align-items: center;
-    /*box-shadow: 0 12px 8px rgba(0, 0, 0, 0.8);*/
 }
 
 nav ul {
@@ -42,15 +45,6 @@ nav ul {
 
 }
 
-/*.nav-item{
-    
-    text-decoration: none;
-    color: black;
-    padding: 1rem;
-    font-size: larger;
-    font-weight: 700;
-
-}*/
 
 nav a {
     text-decoration: none;
@@ -61,9 +55,6 @@ nav a {
     font-weight: 700;
 }
 
-/*nav span{
-    
-}*/
 
 .nav-item a:hover {
     /*text-decoration: underline;*/
@@ -71,11 +62,6 @@ nav a {
     
 }
 
-
-
-
-
-/* Dropdown Styles */
 .dropdown {
     position: relative;
 }
@@ -83,7 +69,7 @@ nav a {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #1e3f66;
+    background-color: #2c4767;
     box-shadow: 0px 0.5rem 1rem 0px rgba(0,0,0,0.4);
     z-index: 1;
     margin-top: .875rem;
@@ -100,27 +86,28 @@ nav a {
 
 .dropdown-content a:first-of-type:hover{
     background-color: white;
-    color: #1e3f66;
+    color: #2c4767;
     border-top-right-radius: .5rem;
     border-top-left-radius: .5rem;
 }
 
 .dropdown-content a:hover{
     background-color: white;
-    color: #1e3f66;
+    color: #2c4767;
 }
 
 .dropdown-content a:last-of-type:hover{
     background-color: white;
-    color: #1e3f66;
+    color: #2c4767;
     border-bottom-right-radius: .5rem;
     border-bottom-left-radius: .5rem;
 }
 
-/*Søk knapp og felt*/
+/* CSS for hover-aktivert dropdown*/
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 /*søk knapp og felt*/
 .search-container {
     position: relative;
@@ -142,31 +129,73 @@ nav a {
 
 #searchField {
     display: none;
-    width: 10rem; /* Adjust width as needed */
+    width: 10rem;
     height:2rem;
-    background-color: aliceblue;
+    background-color: #ffefe0;
+    color: black;
     border: none;
     font-family: inherit;
     padding-right: 1rem;
     padding-left: 1rem;
 }
-/* Main Content Styles */
+
+/* header CSS slutt */
+
+/* hovedinnhold under header div-er */
 main{
-    background-color: blanchedalmond;
+    background-color: #ffefe0;
 }
 
-/*.main-image img{
+#image-container{
+    width: 100%;
+    height: 30rem;
+    position: relative;
+
+}
+
+#vannmerke{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 30rem;
+    justify-content: right;
+    align-items: end;
+    z-index: 7;
+
+}
+
+#GB-logo{
+    width: 17%;
+    max-width: 30rem;
+    min-width: 10rem;
+    padding: 2rem;
+    align-self: center;
+    margin-top: auto;
+    z-index: 8;
+
+}
+
+/* Ved slideshow feil, kode for statisk hovedbilde*/
+/*
+.main-image img{
     width: 100%;
     height: 30rem;
     object-fit: cover;
     border-bottom: 2px solid black;
-}*/
-/* Style for the slideshow container */
+}
+*/
+/* CSS for statisk hovedbildet slutt */
+
+
+/* CSS for slideshow */
 .slideshow-container {
     width: 100%;
     height: 30rem;
-    position: relative;
+    position: absolute;
     border-bottom: 2px solid black;
+    background-color: #303030;
+    z-index: 7;
   }
 
   .fade {
@@ -175,18 +204,22 @@ main{
     position: absolute;
     width: 100%;
     height: 100%;
-    animation: fade 19.9s ease-in-out infinite;
+    animation: fade 20.1s ease-in-out infinite;
   }
 
   @keyframes fade {
     0%, 100% {
-      opacity: .7;
+      opacity: .4;
     }
-    10%, 90% {
+    3%, 98% {
       opacity: 1;
     }
   }
 
+/*CSS for slideshow slutt*/
+
+
+/*hoveddel tekst CSS*/
 .main-text {
     padding: 2rem;
     padding-left: 4rem;
@@ -198,7 +231,7 @@ main{
     font-size: xxx-large;
     text-align: center;
     padding-bottom: 1rem;
-    color: #1e3f66;
+    color: #2c4767;
 }
 
 .main-text p{
@@ -208,21 +241,29 @@ main{
     color: inherit;
 }
 
-/* Footer Styles */
+/*hoveddel tekst CSS slutt*/
+
+
+/* Footer CSS */
 footer {
-    background-color: #1e3f66;
+    background-color: #2c4767;
     color: white;
-    padding: 1.5rem;
-    text-align: center;
+    padding: 2rem;
+    
+    padding-left: 4rem;
+    padding-right: 4rem;
     
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: start;
-    justify-items:center;
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem;
+    padding: 20px;
+
+}
+.kolonne{
+    
 }
 .footer-content p{
     line-height: 1.5;
@@ -231,18 +272,17 @@ footer {
     margin-bottom: 0.5rem;
 }
 .footer-content a{
-    /*text-decoration: none;*/
     color: inherit;
 }
-/*.about-section p{
-    text-decoration: none;
-}*/
 
 .copyright {
-    margin-top: 1.5rem;
+    margin-top: 6rem;
+    text-align: center;
 }
 
 .nodecor{
     text-decoration: none;
     color: inherit;
 }
+
+/*Footer CSS slutt*/

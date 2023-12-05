@@ -1,21 +1,20 @@
-// javascript kode for enkel søkeboks
+// javascript for enkel søkeboks
 
 document.addEventListener('DOMContentLoaded', function () {
     const searchButton = document.getElementById('searchButton');
     const searchField = document.getElementById('searchField');
 
     searchButton.addEventListener('click', function () {
-        // Toggle the visibility of the search field
+        // Gjør søkefeltet synlig med style.display og kaller på CSS flex for riktig formattering.
         searchField.style.display = (searchField.style.display === 'none' || searchField.style.display === '') ? 'flex' : 'none';
     });
 });
 
 
-//slideshow
+// javascript for slideshow
 let currentSlide = 0;
   const slides = document.querySelectorAll('.fade');
-  const imageDuration = 20000; // Adjust the duration each image is displayed (in milliseconds)
-  const fadeDuration = 500; // Adjust the duration of the fade animation (in milliseconds)
+  const imageDuration = 20000; // juster tiden bildet vises i millisekunder
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -34,11 +33,12 @@ let currentSlide = 0;
 
   function updateSlide() {
     nextSlide();
-    setTimeout(updateSlide, imageDuration - fadeDuration); // Adjust the timeout to control the gap between image changes
+    setTimeout(updateSlide, imageDuration); // timeout kaller på verdien i millisekunder 
+    //som bildet skal vises. denne verdien er hvor mange millisekunder update funskjonen venter.
   }
 
-  // Show the first slide initially
+  // Viser det første bildet i div-en
   showSlide(currentSlide);
 
-  // Start the automatic slideshow
+  // starter update slide funskjonen
   updateSlide();

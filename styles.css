@@ -2,8 +2,8 @@
 body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
 
 body {
     min-height: 100vh;
@@ -16,6 +16,11 @@ strong{
 
 .logo img{
     height: 2.5rem;
+    padding: .5rem;
+}
+
+.logo{
+    padding-right: 1rem;
 }
 
 /* Header CSS */
@@ -23,7 +28,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     background-color: white;
     background-color: #FFb56a;
     color: black;
@@ -45,12 +52,13 @@ nav ul {
 
 }
 
-
 nav a {
     text-decoration: none;
     position:relative;
     color: black;
-    padding: 1rem;
+    padding: .75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-size: larger;
     font-weight: 700;
 }
@@ -72,9 +80,8 @@ nav a {
     background-color: #2c4767;
     box-shadow: 0px 0.5rem 1rem 0px rgba(0,0,0,0.4);
     z-index: 1;
-    margin-top: .875rem;
+    margin-top: .6125rem;
     border-radius: .5rem;
-    
 }
 .dropdown-content a{
     font-family: inherit;
@@ -108,36 +115,89 @@ nav a {
     display: block;
 }
 
-/*søk knapp og felt*/
-.search-container {
-    position: relative;
-    /*padding-left: 1rem;
-    margin-top: .25rem;*/
-    display: flex;
-    align-items: center;
-    padding-right: 0rem;
-    margin-right: 0rem;
-}
+/* mobilmeny CSS */
 
-#searchButton { 
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding-left: .75rem;
-    margin-top: .25rem;
-}
 
-#searchField {
+.mobilmeny {
+    height: 30rem;
     display: none;
-    width: 10rem;
-    height:2rem;
-    background-color: #ffefe0;
-    color: black;
-    border: none;
+    width: 15rem;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    position: absolute;
+    z-index: 99;
     font-family: inherit;
-    padding-right: 1rem;
-    padding-left: 1rem;
+
 }
+
+.mobilmeny ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+}
+
+.mobilmeny ul li{
+    text-align: center;
+    list-style: none;
+}
+
+
+.mobilmeny a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.mobilmeny a:hover {
+    background-color: #2c4767;
+    color: white;
+}
+
+
+.mobilmeny.active {
+    display: flex;
+}
+
+.meny-knapp{
+    display: none;
+}
+.meny-knapp img{
+    height: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: .5rem;
+}
+
+
+@media only screen and (max-width: 800px) {
+    nav {
+      display: none
+    }
+    .meny-knapp{
+        display: block;
+    }
+    
+  }
+
+
+@media only screen and (max-width: 500px) {
+    .mobilmeny{
+        width:100%;
+    }
+    .mobilmeny ul li{
+        text-align: right;
+    }
+    .mobilmeny a{
+        padding-right: 2.5rem;
+    }
+  }
+
 
 /* header CSS slutt */
 
@@ -227,6 +287,13 @@ main{
     padding-bottom: 3rem;
 }
 
+@media (max-width: 600px) {
+    .main-text {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
 .main-text h1{
     font-size: xxx-large;
     text-align: center;
@@ -249,7 +316,7 @@ footer {
     background-color: #2c4767;
     color: white;
     padding: 2rem;
-    
+    padding-top: 3rem;
     padding-left: 4rem;
     padding-right: 4rem;
     
@@ -259,12 +326,22 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 4rem;
-    padding: 20px;
 
 }
-.kolonne{
+
+@media (max-width: 600px) {
+    footer{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .footer-content {
+      grid-template-columns: 1fr;
+
+    }
+  }
+/*.kolonne{
     
-}
+}*/
 .footer-content p{
     line-height: 1.5;
 }
@@ -285,4 +362,4 @@ footer {
     color: inherit;
 }
 
-/*Footer CSS slutt*/
+

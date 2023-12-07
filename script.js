@@ -1,14 +1,13 @@
-// javascript for enkel søkeboks
 
-document.addEventListener('DOMContentLoaded', function () {
-    const searchButton = document.getElementById('searchButton');
-    const searchField = document.getElementById('searchField');
+// javascript for mobilmeny
 
-    searchButton.addEventListener('click', function () {
-        // Gjør søkefeltet synlig med style.display og kaller på CSS flex for riktig formattering.
-        searchField.style.display = (searchField.style.display === 'none' || searchField.style.display === '') ? 'flex' : 'none';
-    });
-});
+        const toggleButton = document.getElementsByClassName('meny-knapp')[0]
+const navbarLinks = document.getElementsByClassName('mobilmeny')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+
 
 
 // javascript for slideshow

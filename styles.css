@@ -7,7 +7,9 @@ body, h1, h2, h3, p, ul {
 
 body {
     min-height: 100vh;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #e0f0ff;
+
 }
 
 strong{
@@ -123,8 +125,8 @@ nav a {
     display: none;
     width: 15rem;
     right:0;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
     position: absolute;
     z-index: 99;
     font-family: inherit;
@@ -240,17 +242,6 @@ main{
 
 }
 
-/* Ved slideshow feil, kode for statisk hovedbilde*/
-/*
-.main-image img{
-    width: 100%;
-    height: 30rem;
-    object-fit: cover;
-    border-bottom: 2px solid black;
-}
-*/
-/* CSS for statisk hovedbildet slutt */
-
 
 /* CSS for slideshow */
 .slideshow-container {
@@ -284,6 +275,28 @@ main{
 
 
 /*hoveddel tekst CSS*/
+.bildekonteiner {
+    max-width: 50rem; /* Juster denne verdien etter behov */
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .inspirasjonsbilder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 30rem; /* Juster denne verdien etter behov */
+    border: solid 4px black;
+    overflow: hidden;
+  }
+
+  .inspirasjonsbilder img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
 .main-text {
     padding: 2rem;
     padding-left: 4rem;
@@ -305,12 +318,264 @@ main{
     color: #2c4767;
 }
 
+.main-text h2{
+    font-size: xx-large;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    color: black;
+}
+.main-text h3{
+    font-style: italic;
+    font-size: x-large;
+    color: #2c4767;
+}
+.main-text a{
+    text-decoration: none;
+    color: #2c4767;
+}
+
 .main-text p{
     line-height: 1.5;
     font-size: 1.25rem;
     font-family: inherit;
     color: inherit;
 }
+
+/* reisemål*/
+
+.section-wrapper{
+    padding: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+ eksempel{
+    display: none;
+ }   
+}
+
+.tur {
+    background-color: #ffefe0;
+    max-width: 50rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.5rem .125rem #2c4767;
+}
+
+.tur h2{
+    color: #2c4767;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.tur h3{
+    font-size: x-large;
+}
+
+.tur h4{
+    font-size: larger;
+}
+
+.beskrivelse {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: larger;
+}
+
+.gallery {
+    position: relative;
+    overflow: hidden;
+}
+
+.galleribilde {
+    display: flex;
+    overflow: hidden;
+    border: 4px solid black;
+}
+
+.galleribilde img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 30rem;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    border: none;
+    color: white;
+    padding: .25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 900;
+    border-radius: .5rem;
+}
+
+.prev-button {
+    left: 1rem;
+}
+
+.next-button {
+    right: 1rem;
+}
+
+.program {
+    margin-top: 2rem;
+}
+
+.program h3 {
+    color: #333;
+}
+
+.day {
+    margin-bottom: 2rem;
+}
+
+.day h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+.day ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 1.6rem; /* 20px in rem */
+}
+
+.day li {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #b0b0b0;
+    padding-bottom: 0.5rem;
+}
+/*reisemål CSS slutt*/
+
+/*kalender CSS*/
+
+#kalenderoverskrift{
+    padding: 2rem;
+    padding-top: 4rem;
+    text-align: center;
+    font-size: xxx-large;
+    color: #2c4767;
+}
+
+#page-container {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+  }
+  
+  
+  #calendar-container {
+    padding: 2rem;
+
+  }
+  
+  
+
+  .calendar {
+    background-color: #ffefe0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.5rem .125rem #2c4767;
+  }
+  
+  .month {
+    padding: 1rem;
+    border-bottom: 1px solid #b0b0b0;
+  }
+  
+  .trip-item {
+    padding: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    background-color: #2c4767;
+    border-radius: .5rem;
+    color: white;
+  }
+  
+  .trip-item:hover {
+    background-color: white;
+  }
+  
+  .month a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .trip-item:hover a{
+    color:#2c4767;
+    display: block;
+  }
+
+/* kalender CSS slutt*/
+
+/*kontaktskjema CSS*/
+
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffefe0;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .contact-container h1 {
+    text-align: center;
+    color: black;
+  }
+  
+  #contact-form {
+    margin-top: 1rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  input,
+  textarea {
+    padding: .75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+/*kontaktskjema CSS slutt*/
 
 /*hoveddel tekst CSS slutt*/
 

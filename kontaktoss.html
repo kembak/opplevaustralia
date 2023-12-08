@@ -22,10 +22,10 @@
                 <li class="nav-item, dropdown">
                     <a href="reisemaal.html">Reisemål</a>
                     <div class="dropdown-content">
-                        <a href="#destination1"><span>Melbourne</span></a>
-                        <a href="#destination2"><span>Sydney</span></a>
-                        <a href="#destination3"><span>Hobart</span></a>
-                        <a href="#destination4"><span>Brisbane</span></a>
+                        <a href="reisemaal.html#melbourne"><span>Melbourne</span></a>
+                        <a href="reisemaal.html#sydney"><span>Sydney</span></a>
+                        <a href="reisemaal.html#hobart"><span>Hobart</span></a>
+                        <a href="reisemaal.html#brisbane"><span>Brisbane</span></a>
                     </div>
                 </li>
                 <li class="nav-item"><a href="kalender.html">Kalender</a></li>
@@ -50,45 +50,30 @@
         </ul>
         </div>
     <!-- Main Content -->
-    <main>
-        
-        <div class="maint-text">
-        <!-- Content specific to the Contact Us page -->
-        <h1>Contact Us</h1>
-
-        <div class="contact-info">
-            <h2>How to Reach Us</h2>
-            <p>For any inquiries, feel free to reach out to us via phone or email:</p>
-            <p><strong>Phone:</strong> XXX-XXXX</p>
-            <p><strong>Email:</strong> info@travelagency.com</p>
+    <div class="contact-container">
+        <h1>Kontakt oss</h1>
+        <div id="contact-form">
+          <form id="contactForm">
+            <label for="userName">Navn:</label>
+            <input type="text" id="userName" name="userName" required>
+    
+            <label for="userEmail">Epost:</label>
+            <input type="email" id="userEmail" name="userEmail" required>
+    
+            <label for="userMessage">Skriv din melding:</label>
+            <textarea id="userMessage" name="userMessage" required></textarea>
+    
+            <button type="button" onclick="submitContactForm()">Send Message</button>
+          </form>
         </div>
-
-        <div class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="submit_contact_form.php" method="post">
-                <!-- Add form fields as needed -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-        </div>
-    </main>
-
+      </div>
     
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="kolonne">
                 <a href="kontaktoss.html"><h3>Kontakt Oss</h3></a>
-                <p><strong>tlf:</strong> 112</p>
+                <p><strong>tlf:</strong> 13141516</p>
                 <p><strong>Email:</strong> kundeservice@opplevaustralia.com</p>
                 <p><strong>Adresse:</strong> Svingen 88</p>
                 <p><strong>Åpningstider:</strong></p>
@@ -101,10 +86,7 @@
                 <h3>Om oss</h3>
                 </a>
                 <p>Lær mer om vår virksomhet og våre verdier</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Ut suscipit sem eget nisl vestibulum, in posuere eros interdum. 
-                    Nulla laoreet id quam eget suscipit. 
-                </p>
+               
                 
             </div>
             
